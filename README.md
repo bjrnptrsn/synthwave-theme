@@ -1,16 +1,8 @@
-# Synthwave-Hass
+# Synthwave Theme
 
-[![Version](https://img.shields.io/badge/version-0.3.7-green.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
-[![Maintained](https://img.shields.io/maintenance/no/2020.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
+[![Version](https://img.shields.io/badge/version-0.4.0-green.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
+[![Maintained](https://img.shields.io/maintenance/yes/2026.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
 [![PRs Accepted](https://img.shields.io/badge/accepting%20PR's-yes-x?style=flat-square&labelColor=2a2139&color=f92aad)](#)
-
-## Project Status
-
-**This project is no longer supported.**
-
-Due to Home Assistant now supporting limited theme customization through Lovelace, this theme has become partially redundant. Additionally, I have lost the time and interest to maintain this project further. However, I will still review and accept pull requests for any fixes or improvements submitted by the community.
-
----
 
 > "Do you remember that endless summer back in '84? Cruising down the ocean highway with the top down, the wind in our hair and heads buzzing with neon dreams?"
 >
@@ -18,57 +10,37 @@ Due to Home Assistant now supporting limited theme customization through Lovelac
 
 Inspired by: [Synthwave VSCode Theme](https://github.com/robb0wen/synthwave-vscode)
 
+Fork of [bbbenji/synthwave-hass](https://github.com/bbbenji/synthwave-hass), updated for modern Home Assistant (MD3 / HA 2026.4+).
+
 ---
 
 ## Installation
 
-### Step 1: Locate Your Home Assistant Directory
+### HACS (recommended)
 
-Find the directory containing your Home Assistant configuration. This is typically located at `~/.homeassistant/`.
+1. Add this repository as a custom repository in HACS:
+   - **URL:** `https://github.com/bjrnptrsn/synthwave-theme`
+   - **Category:** Theme
+2. Install "Synthwave Theme" via HACS.
+3. Restart Home Assistant.
 
-### Step 2: Add the Theme
+### Manual
 
-1. Navigate to the `themes` directory:
-   ```bash
-   cd ~/.homeassistant/themes
+1. Copy `themes/synthwave.yaml` into your `<config>/themes/` directory.
+2. Add the following to your `configuration.yaml`:
+   ```yaml
+   frontend:
+     themes: !include_dir_merge_named themes
    ```
-2. If the `themes` directory does not exist, create it:
+3. Restart Home Assistant.
 
-   ```bash
-   mkdir themes
-   ```
+### Important: use Light Mode
 
-   After creating the directory, you may need to restart Home Assistant.
-
-3. Download the theme file directly:
-   ```bash
-   wget https://raw.githubusercontent.com/bbbenji/synthwave-hass/master/themes/synthwave.yaml
-   ```
-
-### Step 3: Update Configuration
-
-Add the following lines to your `configuration.yaml` file to ensure Home Assistant recognizes the new theme:
-
-```yaml
-frontend:
-  themes: !include_dir_merge_named themes
-```
-
-### Step 4: Enable the Theme
-
-You can enable the theme from your profile page or by configuring it directly in `configuration.yaml`.
-
----
-
-## Extras
-
-For additional styling that is not achievable with a `.yaml` theme file, you can install [synthwave-hass-extras](https://github.com/bbbenji/synthwave-hass-extras).
+Although the theme looks dark, set Home Assistant to **Light Mode** in your profile. This is required for the climate card thermostat to render correctly.
 
 ---
 
 ## Screenshots
-
-Here are some visuals to get a feel for the theme:
 
 ![Screenshot 1](https://i.imgur.com/DHbESc9.png)
 
@@ -82,4 +54,4 @@ Here are some visuals to get a feel for the theme:
 
 ## Contributions
 
-While this project is no longer actively maintained, contributions are welcome! If you find any issues or have improvements to suggest, feel free to submit a pull request. Let's keep the Synthwave spirit alive together!
+Contributions are welcome! If you find any issues or have improvements to suggest, feel free to submit a pull request.
