@@ -4,6 +4,7 @@ synthwave:
   secondary-text-color: '#ffffffca'
   text-primary-color: '#f4eee4'
   disabled-text-color: '#bdbdbd'
+  mush-rgb-disabled: '132, 139, 189'
   text-light-primary-color: '#fff'
 
   # main interface colors
@@ -24,6 +25,7 @@ synthwave:
   # background and sidebar
   card-background-color: '#34294f'
   app-header-background-color: 'var(--primary-background-color)'
+  app-header-edit-background-color: 'var(--app-header-background-color)'
   paper-card-background-color: 'var(--card-background-color)'
   secondary-background-color: 'var(--light-primary-color)'
 
@@ -56,6 +58,9 @@ synthwave:
   switch-checked-color: 'var(--dark-primary-color)' # Background On
   paper-toggle-button-unchecked-button-color: 'var(--primary-text-color)' # Knob Off
   paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)' # Background Off
+  # literal on purpose: --disabled-color also drives the climate slider track and must stay at the HA light-mode default
+  ha-switch-thumb-background-color: '#848bbd'
+  ha-switch-thumb-border-color: '#848bbd'
 
   # Sliders
   slider-color: 'var(--primary-color)'
@@ -250,13 +255,16 @@ synthwave:
   ha-color-fill-primary-normal-active: var(--ha-color-primary-10)
 
   ha-color-fill-neutral-quiet-resting: var(--ha-color-neutral-05)
-  ha-color-fill-neutral-quiet-f-fill-neutral-quiet-active: var(--ha-color-neutral-00)
+  ha-color-fill-neutral-quiet-hover: var(--ha-color-form-background-hover)
+  ha-color-fill-neutral-quiet-active: var(--ha-color-neutral-05)
 
   ha-color-fill-neutral-normal-resting: var(--ha-color-neutral-10)
   ha-color-fill-neutral-normal-hover: var(--ha-color-neutral-20)
   ha-color-fill-neutral-normal-active: var(--ha-color-neutral-10)
+  wa-color-neutral-fill-normal: var(--ha-color-form-background-hover)
 
   ha-color-fill-disabled-quiet-resting: var(--ha-color-neutral-10)
+  ha-color-fill-disabled-quiet-hover: var(--ha-color-neutral-20)
 
   ha-color-fill-disabled-normal-resting: var(--ha-color-neutral-20)
 
@@ -302,7 +310,7 @@ synthwave:
   ha-color-on-primary-normal: var(--ha-color-primary-60)
 
   ha-color-on-neutral-quiet: var(--ha-color-neutral-70)
-  ha-color-on-neutral-normal: var(--ha-color-neutral-60)
+  ha-color-on-neutral-normal: var(--primary-text-color)
   ha-color-on-neutral-loud: var(--white-color)
 
   ha-color-on-disabled-quiet: var(--ha-color-neutral-40)
@@ -321,6 +329,7 @@ synthwave:
   ha-color-on-success-normal: var(--ha-color-green-60)
   ha-color-on-success-loud: var(--white-color)
 
+  ha-color-surface-low: var(--ha-color-form-background)
   ha-color-surface-default: var(--ha-color-neutral-10)
   ha-color-on-surface-default: var(--ha-color-neutral-95)
 
@@ -332,6 +341,7 @@ synthwave:
   rgb-secondary-background-color: '36, 27, 47'
   rgb-sidebar-background-color: '36, 27, 47'
   rgb-md-sys-color-surface: '42, 33, 57'
+  rgb-md-sys-color-surface-variant: '52, 41, 79'
   rgb-md-sys-color-on-surface: '255, 255, 255'
   rgb-md-sys-color-primary: '249, 42, 173'
   rgb-md-sys-color-secondary-container: '73, 84, 149'
